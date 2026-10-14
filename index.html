@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Персональный организатор — Дашборд</title>
+  <meta name="description" content="Интерактивная панель управления UI-компонентами: список дел, цитаты, погода, шутки." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <a class="skip-link" href="#dashboard">Перейти к содержимому</a>
+
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-logo" aria-hidden="true">◆</span>
+        <div>
+          <h1 class="brand-title">Персональный организатор</h1>
+          <p class="brand-subtitle">Интерактивная панель управления виджетами</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <div class="add-menu" role="group" aria-label="Добавить виджет">
+          <button type="button" class="btn btn-primary" id="add-todo" data-widget="todo">
+            + Список дел
+          </button>
+          <button type="button" class="btn btn-primary" id="add-quote" data-widget="quote">
+            + Цитата
+          </button>
+          <button type="button" class="btn btn-primary" id="add-weather" data-widget="weather">
+            + Погода
+          </button>
+          <button type="button" class="btn btn-primary" id="add-joke" data-widget="joke">
+            + Шутка
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="dashboard" class="dashboard" aria-label="Панель виджетов"></main>
+
+  <div id="empty-state" class="empty-state" hidden>
+    <p>Панель пуста. Добавьте виджет с помощью кнопок выше.</p>
+  </div>
+
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
